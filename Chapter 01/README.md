@@ -19,6 +19,20 @@ NumPy is highly optimized for performance, especialy when working with large dat
 - **vectorization** : NumPy performs element-wise operations on arrays without the need for explicit loops in python. This is achieved through vectorization, *which is the process of applying operations over entire arrays*, making use of fast, low-level machine instructions.
 - **Cotiguous Memory layout** : Unlike python lists, which are a collection of pointers to objects stored in memory, NumPy arrays are stored in contiguous blocks of memory. This allows for more efficient memory access and makes operations like slicing, indexing, and broadcasting extremely fast.
 - **Low-Level Optimizationss** : NumPy is implemented in C and uses optimized, comppiled code for its core functions. This ensures that operations on arrays are performed at near-native speeds. Additionally, NumPy leverages multi-threading for operations that can be parallelized, leading to further performance gains.
-- **Efficient Mathematical Libraries** : NumPy uses highly optimized libraraies like **BLAS** (Basic Linear Algebra Subprograms) and **LAPACK** (Linear Algebra Package) for performaing linear algebra operations. These libraries are highly tuned and offer significant speed improvments for matrix operations, such as matrix multiplication, inversion and eigenvalue computations.
+- **Efficient Mathematical Libraries** : NumPy uses highly optimized libraraies like **BLAS** (Basic Linear Algebra Subprograms) and **LAPACK** (Linear Algebra Package) for performaing linear algebra operations. These libraries are highly tuned and offer significant speed improvments for matrix operations, such as matrix multiplication, inversion and eigenvalue computations.<br>
+
 **NumPy Arrays v/s Python Lists**<br>
+
+|**Feature**|**Arrays**|**Lists**|  
+|-------|------|-----|
+|**Performance**|Much faster due to optimized C implementation and vectorized operations|Slower, as list store pointers to objects and require python loops for operstions|
+|**Memory Efficiency**|More memory-efficient, as arrays store data in contiguous blocks with fixed data types.|Less memory-efficient, as each element is a reference to an object, and types can vary|
+|**Data Type**|Homogeneous (all elements must be of the same type)|Heterogeneous (element can be of different types)|
+|**Mathematical Operations**| Supports element-wise operations and built-in mathematical functions (e.g. <mark>sum()</mark>, <mark>mean()</mark>, etc).|Requires manual looping or list comprehensions for element-wise operations.|
+|**Dimensionality**|Supports multi-dimensional arrays (e.g. 2D, 3D arrays, matrices)|Primarily 1D, though you can nest lists to create multi-dimensional structures, but they're less efficient and harder to manipulate|
+|**Broadcasring**|Supports broadcasting, allowing operations between arrays of different shapes|No broadcasting supports; operations requires matching list lengths or explicit reshaping|
+|**Memory usage**|uses less memory for large datasets due to homogeneous data storage and contiguous memory allocation|USes more memory as each element is an object, requiring extra overhead for references|
+
+
+
 
