@@ -42,7 +42,9 @@ pip install numpy
 we can create a NumPy array by using the array() function present in the NumPy.
 ```
 import numpy as np
-arr = np.array([12,23,45,67,89]) # 1D array
+arr = np.array([12,23,45,67,89]) # 1D array with int values
+arr = np.array([12.32,45.87,45.76,78.90]) # 1D array with float values
 arr = np.array([[21,32,43],[56,67,89]]) # 2D array
 arr = np.array([[[21,32,43],[56,67,89]],[[11,82,63],[50,60,80]]]) # 3D array
+# 2D and 3D array with float values can be created in the similar way
 ```
