@@ -67,7 +67,7 @@ np.float32 # single precision floating point
 np.float64 # double precision floatinig point
 np.complex64 # complex numbers, represented by two 32-bit floats
 np.complex128 # complex numbers, represented by two 64-bit floats
-np.bool # Boolean type (<mark>True</mark> or <mark>Flase</mark>
+np.bool # Boolean type (True or Flase)
 np.object # Python object type (can hold any python object)
 np.str # string data tyoe
 np.void # represent raw data (no specific type)
