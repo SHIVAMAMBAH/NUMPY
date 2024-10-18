@@ -142,9 +142,11 @@ Output
 ```
 import numpy as np
 arr = np.array([12,23,34,65,67,89,90,87])
-arr.resize(4,2)
+arr.resize(2,4)
 print(arr)
 ```
 Output
 ```
+[[12,23,34,65]
+ [67,89,90,87]]
 ```
