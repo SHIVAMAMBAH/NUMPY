@@ -137,6 +137,4 @@ Output
 ```
 [35]
 ```
-
-
-
+## Reshaping and Resizing Arrays
