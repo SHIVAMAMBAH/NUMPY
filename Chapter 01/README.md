@@ -34,6 +34,11 @@ NumPy is highly optimized for performance, especialy when working with large dat
 |**Memory usage**|uses less memory for large datasets due to homogeneous data storage and contiguous memory allocation|USes more memory as each element is an object, requiring extra overhead for references|
 
 ### Creating NumPy arrays
+Install numpy in your local device.<br>
+For windows(make sure python is installed) : Open command prompt or cmd and the type
+```
+pip install numpy
+```
 we can create a NumPy array by using the array() function present in the NumPy.
 ```
 import numpy as np
