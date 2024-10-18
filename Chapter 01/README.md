@@ -54,21 +54,21 @@ arr.dtype
 ```
 This is a list of data types that exits in numpy
 ```
-np.int8
-np.int16
-np.int32
-np.int64
-np.unit8
-np.uint16
-np.uint32
-np.uint64
-np.float16
-np.float32
-np.float64
-np.complex64
-np.complex128
-np.bool
-np.object
-np.str
-np.void
+np.int8 # 8-bit
+np.int16 # 16-bit
+np.int32 # 32-bit
+np.int64 # 64-bit
+np.unit8 # 8-bit
+np.uint16 # 16-bit
+np.uint32 # 32-bit
+np.uint64 # 64-bit
+np.float16 # half precision floating point
+np.float32 # single precision floating point
+np.float64 # double precision floatinig point
+np.complex64 # complex numbers, represented by two 32-bit floats
+np.complex128 # complex numbers, represented by two 64-bit floats
+np.bool # Boolean type (<mark>True</mark> or <mark>Flase</mark>
+np.object # Python object type (can hold any python object)
+np.str # string data tyoe
+np.void # represent raw data (no specific type)
 ```
