@@ -72,3 +72,54 @@ np.object # Python object type (can hold any python object)
 np.str # string data tyoe
 np.void # represent raw data (no specific type)
 ```
+```
+import numpy as np
+arr = np.zeros(2,3) # create an array of size 2x3 filled with zeroes
+print(arr)
+```
+Output
+```
+[[0. 0. 0.]
+ [0. 0. 0.]]
+```
+```
+import numpy as np
+arr = np.ones(2,3) # create an array of size 2x3 filled with ones
+print(arr)
+```
+Output
+```
+[[1 1 1]
+ [1 1 1]]
+```
+```
+import numpy as np
+arr = np.full((2,3),7) # create an array of size 2x3 filled with 7
+print(arr)
+```
+Output
+```
+[[7 7 7]
+ [7 7 7]]
+```
+```
+import numpy as np
+arr = np.arange(0,10,2) # create an array with evenly spaced values within a given interval
+print(arr)
+```
+Output
+```
+[0 2 4 6 8]
+```
+```
+import numpy as np
+arr = np.linspace(0,1,5) # create an array with evenly spaced values within a given interval
+print(arr)
+```
+Output
+```
+[0. 0.25 0.5 0.75 1.]
+```
+
+
+
