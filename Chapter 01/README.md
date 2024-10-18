@@ -72,6 +72,7 @@ np.object # Python object type (can hold any python object)
 np.str # string data tyoe
 np.void # represent raw data (no specific type)
 ```
+Using functions np.zeros(), np.ones(), np.full(), np.arange(), np.linspace() for creating arrays
 ```
 import numpy as np
 arr = np.zeros(2,3) # create an array of size 2x3 filled with zeroes
