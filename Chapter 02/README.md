@@ -42,3 +42,4 @@ Output
 22
 23
 ```
+### Multi-dimensional array slicing
