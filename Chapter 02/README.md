@@ -92,4 +92,14 @@ print(slice_3d)
 ```
 ### fancy indexing
 Fancy indexing refers to using arrays of integers or boolean values to index into another array. It is more flexible and powerful than regular slicing, allowing for non-sequential and complex element access.
+```
+import numpy as np
+array = np.array([10,20,30,40,50,60])
+indices = np.array([0,2,4])
+print(array[indices])
+```
+Output
+```
+[10,30,50]
+```
 
