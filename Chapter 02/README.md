@@ -151,6 +151,15 @@ arr = arr.resize(-1) # to get to the original array
 
 arr = arr.resize(4,2) # resize to the 4 rows and 2 columns
 print(arr)
+
+arr = arr.resize(-1)
+
+arr = arr.resize(arr,(10,)) # resize to get the 10 elements, extra elements will repeat if necessary
+print(arr)
+
+arr = arr.resize(arr,(6,)) # resize to get the 6 elements, extra elements will get truncate
+print(arr)
+
 ```
 Output
 ```
@@ -161,4 +170,8 @@ Output
  [34,65]
  [67,89]
  [90,87]]
+
+[12,23,34,65,67,89,90,87,12,23]
+
+[12,23,34,65,67,89]
 ```
