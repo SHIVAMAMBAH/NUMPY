@@ -25,7 +25,7 @@ NumPy is highly optimized for performance, especialy when working with large dat
 
 |**Feature**|**Arrays**|**Lists**|  
 |-------|------|-----|
-|**Performance**|Much faster due to optimized C implementation and vectorized operations|Slower, as list store pointers to objects and require python loops for operstions|
+|**Performance**|Much faster due to optimized C implementation and vectorized operations|Slower, as list store pointers to objects and require python loops for operations|
 |**Memory Efficiency**|More memory-efficient, as arrays store data in contiguous blocks with fixed data types.|Less memory-efficient, as each element is a reference to an object, and types can vary|
 |**Data Type**|Homogeneous (all elements must be of the same type)|Heterogeneous (element can be of different types)|
 |**Mathematical Operations**| Supports element-wise operations and built-in mathematical functions (e.g. <mark>sum()</mark>, <mark>mean()</mark>, etc).|Requires manual looping or list comprehensions for element-wise operations.|
