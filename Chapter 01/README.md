@@ -52,3 +52,23 @@ you can check the data type of the array by using the array.dtype method
 ```
 arr.dtype
 ```
+This is a list of data types that exits in numpy
+```
+np.int8
+np.int16
+np.int32
+np.int64
+np.unit8
+np.uint16
+np.uint32
+np.uint64
+np.float16
+np.float32
+np.float64
+np.complex64
+np.complex128
+np.bool
+np.object
+np.str
+np.void
+```
