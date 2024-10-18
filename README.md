@@ -47,4 +47,35 @@
   - Matrix transposition (.T)
   - Determinant and inverse of a matrix
   - Solving linear systems with np.linalg.solve()
-### Module
+### Module 4 : Advanced Array Concepts
+- 11 . Broadcasting
+  - Exaplanation of broadcasting rules
+  - Practical examples
+  - Understanding how arrays with different shapes interact
+- 12 . Vectorization
+  - Importance of vectorized operations for performance
+  - Writing efficient NUmPy code
+- 13 . Random Number Generator
+  - using np.random module
+  - Generating random numbers
+  - Setting random seeds
+  - Random sampling from disributions
+### Module 5 : Input/Output with NumPy
+- 14 . Saving and Loading data
+  - saving arrays to files using np.save(), np.savez()
+  - Loading arrays from files using
+- 15 . Text and CSV files
+  - Reading and writing arrays to/from text files (np.savetxt(), np.loadtxt())
+  - Handling CSV files (np.genfromtxt(), np.recfromcsv())
+### Module 6 : Numerical Computations and Performance
+- 16 . Working with Large Arrays
+  - handling large datasets with NumPy
+  - Efficient memory usage
+  - Performance considerations and optimization techniques
+- 17 . NumPy with Pandas
+  - Integrating NumPy arrays with Pandas DataFrames
+  - Converting between NumPy arrays and Pandas objects
+### Module 7 : Applications of NumPy
+- 18 . Image Processing
+- 19. Solving Mathematical Equations
+  20. Data Analysis and scientific Computing
