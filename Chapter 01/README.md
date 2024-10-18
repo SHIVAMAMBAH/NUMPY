@@ -20,3 +20,5 @@ NumPy is highly optimized for performance, especialy when working with large dat
 - **Cotiguous Memory layout** : Unlike python lists, which are a collection of pointers to objects stored in memory, NumPy arrays are stored in contiguous blocks of memory. This allows for more efficient memory access and makes operations like slicing, indexing, and broadcasting extremely fast.
 - **Low-Level Optimizationss** : NumPy is implemented in C and uses optimized, comppiled code for its core functions. This ensures that operations on arrays are performed at near-native speeds. Additionally, NumPy leverages multi-threading for operations that can be parallelized, leading to further performance gains.
 - **Efficient Mathematical Libraries** : NumPy uses highly optimized libraraies like **BLAS** (Basic Linear Algebra Subprograms) and **LAPACK** (Linear Algebra Package) for performaing linear algebra operations. These libraries are highly tuned and offer significant speed improvments for matrix operations, such as matrix multiplication, inversion and eigenvalue computations.
+**NumPy Arrays v/s Python Lists**<br>
+
