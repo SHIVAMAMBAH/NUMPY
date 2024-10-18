@@ -37,16 +37,16 @@
 ### Module 3 : Operations on NumPy Arrays
 - 8 . Basic Array Operation
   - Element-wise operations (+, -, *, /)
-  - Universal functions(ufuncs) : np.sqrt(), np.sin(), np.exo(), np.log()
+  - Universal functions(ufuncs) : <mark>np.sqrt()</mark>, <mark>np.sin()</mark>, <mark>np.exo()</mark>, <mark>np.log()</mark>
   - Broadcasting in NumPy
 - 9 .Mathematical and Staistical Functions
-  - Array-wide operations : np.sum(), np.min(), np.max(), np.mean(), np.std(), np.median()
+  - Array-wide operations : <mark>np.sum()</mark>, <mark>np.min()</mark>, <mark>np.max()</mark>, <mark>np.mean()</mark>, <mark>np.std()</mark>, <mark>np.median()</mark>
   - Aggegrate functions : axis-based aggegration
 - 10 . Linear Algebra in NumPy
-  - Matrix multiplication (np.dot(), @ operator)
+  - Matrix multiplication (<mark>np.dot()</mark>, <mark>@</mark> operator)
   - Matrix transposition (.T)
   - Determinant and inverse of a matrix
-  - Solving linear systems with np.linalg.solve()
+  - Solving linear systems with <mark>np.linalg.solve()</mark>
 ### Module 4 : Advanced Array Concepts
 - 11 . Broadcasting
   - Exaplanation of broadcasting rules
@@ -62,11 +62,11 @@
   - Random sampling from disributions
 ### Module 5 : Input/Output with NumPy
 - 14 . Saving and Loading data
-  - saving arrays to files using np.save(), np.savez()
+  - saving arrays to files using <mark>np.save()</mark>, <mark>np.savez()</mark>
   - Loading arrays from files using
 - 15 . Text and CSV files
-  - Reading and writing arrays to/from text files (np.savetxt(), np.loadtxt())
-  - Handling CSV files (np.genfromtxt(), np.recfromcsv())
+  - Reading and writing arrays to/from text files (<mark>np.savetxt()</mark>, <mark>np.loadtxt()</mark>)
+  - Handling CSV files (<mark>np.genfromtxt()</mark>, ,<mark>np.recfromcsv()</mark>)
 ### Module 6 : Numerical Computations and Performance
 - 16 . Working with Large Arrays
   - handling large datasets with NumPy
