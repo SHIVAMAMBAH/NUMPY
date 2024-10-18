@@ -75,4 +75,18 @@ Output
 ```
 import numpy as np
 array_3D = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[13,14,15],[16,17,18]]])
+
+submatrix_3d = array_3D[:2,:,:] # to slice the first two 2D arrays
+print(submatrix_3d)
+
+slice_3d = array_3d[:,0,0] # to slice the first element from all 2D matrices
+print(slice_3d)
+```
+```
+[[[ 1  2  3]
+  [ 4  5  6]]
+
+ [[ 7  8  9]
+  [10 11 12]]]
+[1 7 13]
 ```
