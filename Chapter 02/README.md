@@ -90,3 +90,6 @@ print(slice_3d)
   [10 11 12]]]
 [1 7 13]
 ```
+### fancy indexing
+Fancy indexing refers to using arrays of integers or boolean values to index into another array. It is more flexible and powerful than regular slicing, allowing for non-sequential and complex element access.
+
