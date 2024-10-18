@@ -13,3 +13,7 @@ NUmPy (Numerical Python) is a **open-source** Python library that provides power
 - Ease of use with mathemtical operations
 - Memory Efficiency
 - Data Analyst and Machine Learning
+### Key features : performance, ease of use and broadcasting
+**Performance** <br>
+NumPy is highly optimized for performance, especialy when working with large datasets and numerical computations. Its performance advantages primarily come from one of the following factors:
+- **vectorization** : NumPy performs element-wise operations on arrays without the need for explicit loops in python. This is achieved through vectorization, which is the process of applying operations over entire arrays, making use of fast, low-level machine instructions.
