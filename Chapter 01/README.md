@@ -32,3 +32,12 @@ NumPy is highly optimized for performance, especialy when working with large dat
 |**Dimensionality**|Supports multi-dimensional arrays (e.g. 2D, 3D arrays, matrices)|Primarily 1D, though you can nest lists to create multi-dimensional structures, but they're less efficient and harder to manipulate|
 |**Broadcasring**|Supports broadcasting, allowing operations between arrays of different shapes|No broadcasting supports; operations requires matching list lengths or explicit reshaping|
 |**Memory usage**|uses less memory for large datasets due to homogeneous data storage and contiguous memory allocation|USes more memory as each element is an object, requiring extra overhead for references|
+
+### Creating NumPy arrays
+we can create a NumPy array by using the array() function present in the NumPy.
+```
+import numpy as np
+arr = np.array([12,23,45,67,89]) # 1D array
+arr = np.array([[21,32,43],[56,67,89]]) # 2D array
+arr = np.array([[[21,32,43],[56,67,89]],[[11,82,63],[50,60,80]]]) # 3D array
+```
