@@ -119,5 +119,24 @@ The condition <mark>arr>25</mark> creates a boolean mask
 ```
 [False, False, True, True, True ,True,True]
 ```
+Set elements greater than 25 to 100
+```
+arr[mask] = 100
+print(arr)
+```
+output
+```
+[12,23,100,100,100,100]
+```
+Combining multiple conditions with boolean masking by using the logical operator (&, |,~)
+```
+mask = (arr>25) & (arr<45)
+print(arr[mask])
+```
+Output
+```
+[35]
+```
+
 
 
