@@ -77,5 +77,5 @@
   - Converting between NumPy arrays and Pandas objects
 ### Module 7 : Applications of NumPy
 - 18 . Image Processing
-- 19. Solving Mathematical Equations
-  20. Data Analysis and scientific Computing
+- 19 . Solving Mathematical Equations
+- 20 . Data Analysis and scientific Computing
