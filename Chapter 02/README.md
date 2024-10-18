@@ -138,3 +138,13 @@ Output
 [35]
 ```
 ## Reshaping and Resizing Arrays
+### Reshaping arrays using np.reshape()
+```
+import numpy as np
+arr = np.array([12,23,34,65,67,89,90,87])
+arr.resize(4,2)
+print(arr)
+```
+Output
+```
+```
