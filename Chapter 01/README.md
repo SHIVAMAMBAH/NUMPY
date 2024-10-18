@@ -121,6 +121,22 @@ Output
 ```
 [0. 0.25 0.5 0.75 1.]
 ```
+**Array Attributes**
+```
+import numpy as np
+arr = np.array([12,23,45,54])
+print(arr.size) 
+print(arr.shape)
+print(arr.ndim)
+print(arr.dtype)
+```
+Output
+```
+4 # size
+(4,) # shape
+1 # ndim
+int16 # datatype
+```
 
 
 
