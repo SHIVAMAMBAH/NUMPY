@@ -43,3 +43,21 @@ Output
 23
 ```
 ### Multi-dimensional array slicing
+```
+import numpy as np
+array_2D = np.array([[1,2,3,5],
+                     [5,6,7,8],
+                     [9,10,11,12],
+                     [13,14,15,16]])
+row_slice = array_2D[1,:] # slice the second row (index 1)
+print(row_slice)
+
+column_slice = array_2D[:,2] # slice the third column (index 2)
+print(column_slice)
+
+submatrix = array_2D[0:2, 0:2] # top-left 2x2 matrix
+print(submatrix)
+
+reverse_rows = array_2D[::-1,:]
+print(reverse_rows)
+```
