@@ -103,5 +103,21 @@ Output
 [10,30,50]
 ```
 ### Boolean masking
-Boolean masking is a powerful technique that allows you to filter or manipulate elements of an array based on conditions. A boolean mask is essentially an NumPy Array of the same shape as the original array, where each element is either <mark>Trus</mark> or <mark>False</mark>. When you apply this mask to an array, it returns the elmenets where the mask it <mark>True</mark>, filtering out the elements where the mask is <mark>False</mark>.
+Boolean masking is a powerful technique that allows you to filter or manipulate elements of an array based on conditions. A boolean mask is essentially an NumPy Array of the same shape as the original array, where each element is either <mark>True</mark> or <mark>False</mark>. When you apply this mask to an array, it returns the elmenets where the mask it <mark>True</mark>, filtering out the elements where the mask is <mark>False</mark>.
+
+```
+import numpy as np
+arr = np.array([12,23,35,56,67,90])
+mask = arr>25
+print(arr[mask])
+```
+Output
+```
+[35,56,67,90]
+```
+The condition <mark>arr>25</mark> creates a boolean mask
+```
+[False, False, True, True, True ,True,True]
+```
+
 
