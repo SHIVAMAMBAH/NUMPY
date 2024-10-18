@@ -175,3 +175,7 @@ Output
 
 [12,23,34,65,67,89]
 ```
+### Flattening arrays (.flattern(), ravel())
+Both are used to convert multi-dimensional arrays into a one-dimensional array, but they gave some key differences in how they handle the original data.
+- **flatten()** : It returns a copy of the original array in 1D form, meaning it always created a new copy. The original array remaines unchanged.
+- **ravel()** : It returns a flattened view of the original array whenever possible, meaning it tries to avois creating a copy and returns a view. However, if the memory layout doesn't allow, it might create a copy. 
