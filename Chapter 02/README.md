@@ -61,3 +61,7 @@ print(submatrix)
 reverse_rows = array_2D[::-1,:]
 print(reverse_rows)
 ```
+```
+import numpy as np
+array_3D = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[13,14,15],[16,17,18]]])
+```
