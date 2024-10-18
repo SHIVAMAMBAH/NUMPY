@@ -48,3 +48,7 @@ arr = np.array([[21,32,43],[56,67,89]]) # 2D array
 arr = np.array([[[21,32,43],[56,67,89]],[[11,82,63],[50,60,80]]]) # 3D array
 # 2D and 3D array with float values can be created in the similar way
 ```
+you can check the data type of the array by using the array.dtype method 
+```
+arr.dtype
+```
