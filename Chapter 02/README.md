@@ -232,7 +232,7 @@ Sometimes, we need to increase the dimensions of an array.
 ```python
 array_1D = arr = np.array([12,23,34,45,56,67,78])
 array_row_vector = array_1d[np.newaxis, :]
-print(array_row_vector.)  # (1, 8)
+print(array_row_vector)  # (1, 8)
 ```
 **Output:**
 ```
