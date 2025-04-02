@@ -215,4 +215,13 @@ output
 ```python
 [1 2 3 4 5 6]
 ```
+### **Key Differences Between `flatten()` and `ravel()`**
+
+| Feature            | `flatten()`                         | `ravel()`                            |
+|--------------------|-------------------------------------|--------------------------------------|
+| **Return Type**     | Always returns a new copy           | Returns a view whenever possible     |
+| **Modifications**   | Changes to the flattened array don't affect the original | Changes to the raveled array may affect the original if it’s a view |
+| **Memory Efficiency** | Less memory efficient (creates a new copy) | More memory efficient (avoids creating a copy if possible) |
+| **Usage**           | Use when you need a completely new, independent array | Use when you need a flattened view of the original array |
+---
 
