@@ -261,3 +261,23 @@ Alternatively, you can use `expand_dims()`:
 array_expanded = np.expand_dims(array_1d, axis=0)  # Adds dimension at axis 0
 print(array_expanded.shape)  # (1, 6)
 ```
+
+## **4. Squeezing Dimensions (`squeeze()`)**
+The `squeeze()` function removes single-dimensional entries from the shape of an array.
+
+### **Example: Removing Single-Dimensional Entries**
+```python
+array_3d = np.array([[[1, 2, 3]]])  # Shape (1, 1, 3)
+
+array_squeezed = np.squeeze(array_3d)
+
+print(array_squeezed.shape)  # (3,)
+```
+**Output:**
+```
+(3,)  # Removed unnecessary dimensions
+```
+
+- `squeeze()` removes dimensions of size 1, making the array more compact.
+
+---
