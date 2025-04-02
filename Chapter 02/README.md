@@ -292,3 +292,147 @@ print(array_squeezed)  # (3,)
 | `expand_dims()` | Add an extra dimension | No | `np.expand_dims(array, axis=0)` |
 | `squeeze()` | Remove single-dimensional entries | No | `np.squeeze(array)` |
 | `resize()` | Change size and modify original array | Yes (modifies in-place) | `array.resize((3,2))` |
+
+
+## **Concatenating Arrays in NumPy**
+NumPy provides multiple ways to combine (concatenate) arrays along different axes. The three most commonly used functions for concatenation are:
+
+1. **`np.concatenate()`** – General-purpose concatenation along any axis.
+2. **`np.vstack()`** – Stacks arrays vertically (row-wise).
+3. **`np.hstack()`** – Stacks arrays horizontally (column-wise).
+
+---
+
+## **1. `np.concatenate()` – General Concatenation**
+The `np.concatenate()` function is used to join two or more arrays along a specified axis.
+
+### **Example: Concatenating 1D Arrays**
+```python
+import numpy as np
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+result = np.concatenate((arr1, arr2))
+
+print(result)
+```
+**Output:**
+```
+[1 2 3 4 5 6]
+```
+- By default, `np.concatenate()` joins arrays along axis `0` (row-wise for 1D arrays).
+
+---
+
+### **Example: Concatenating 2D Arrays**
+```python
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+
+# Concatenating along axis=0 (row-wise)
+result1 = np.concatenate((arr1, arr2), axis=0)
+
+# Concatenating along axis=1 (column-wise)
+result2 = np.concatenate((arr1, arr2), axis=1)
+
+print(result1)  # Row-wise concatenation
+print(result2)  # Column-wise concatenation
+```
+**Output:**
+```
+[[1 2]
+ [3 4]
+ [5 6]
+ [7 8]]
+
+[[1 2 5 6]
+ [3 4 7 8]]
+```
+- **`axis=0` (rows)** → New rows are added.
+- **`axis=1` (columns)** → New columns are added.
+
+---
+
+## **2. `np.vstack()` – Vertical Stacking (Row-wise)**
+- `np.vstack()` stacks arrays **vertically** (along axis `0`).
+- It is a shortcut for `np.concatenate(..., axis=0)`.
+
+### **Example: Stacking Arrays Vertically**
+```python
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+result = np.vstack((arr1, arr2))
+
+print(result)
+```
+**Output:**
+```
+[[1 2 3]
+ [4 5 6]]
+```
+- `vstack()` creates a **2D array** from **1D arrays**.
+
+For **2D arrays**, it works the same as `concatenate(..., axis=0)`:
+```python
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+
+result = np.vstack((arr1, arr2))
+
+print(result)
+```
+**Output:**
+```
+[[1 2]
+ [3 4]
+ [5 6]
+ [7 8]]
+```
+
+---
+
+## **3. `np.hstack()` – Horizontal Stacking (Column-wise)**
+- `np.hstack()` stacks arrays **horizontally** (along axis `1`).
+- It is a shortcut for `np.concatenate(..., axis=1)`.
+
+### **Example: Stacking Arrays Horizontally**
+```python
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+result = np.hstack((arr1, arr2))
+
+print(result)
+```
+**Output:**
+```
+[1 2 3 4 5 6]
+```
+- `hstack()` behaves like simple concatenation for 1D arrays.
+
+For **2D arrays**, it works like `concatenate(..., axis=1)`:
+```python
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+
+result = np.hstack((arr1, arr2))
+
+print(result)
+```
+**Output:**
+```
+[[1 2 5 6]
+ [3 4 7 8]]
+```
+- Columns from `arr2` are added to `arr1`.
+
+---
+
+## **Summary Table**
+| Function | Concatenation Type | Default Axis | Example |
+|----------|--------------------|--------------|---------|
+| `np.concatenate()` | General-purpose concatenation | Can be any axis | `np.concatenate((arr1, arr2), axis=1)` |
+| `np.vstack()` | Vertical stacking (row-wise) | `axis=0` | `np.vstack((arr1, arr2))` |
+| `np.hstack()` | Horizontal stacking (column-wise) | `axis=1` | `np.hstack((arr1, arr2))` |
