@@ -274,7 +274,7 @@ array_squeezed = np.squeeze(array_3d)
 print(array_squeezed)  # (3,)
 ```
 **Output:**
-```
+```python
 [1, 2,3]
 ```
 
