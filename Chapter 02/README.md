@@ -151,7 +151,7 @@ arr = arr.resize(-1) # to get to the original array
 arr = arr.resize(4,2) # resize to the 4 rows and 2 columns
 print(arr)
 
-arr = arr.resize(-1)
+arr = arr.reshape(-1)
 
 arr = arr.resize(arr,(10,)) # resize to get the 10 elements, extra elements will repeat if necessary
 print(arr)
