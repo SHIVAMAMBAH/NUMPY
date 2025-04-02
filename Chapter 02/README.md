@@ -271,11 +271,11 @@ array_3d = np.array([[[1, 2, 3]]])  # Shape (1, 1, 3)
 
 array_squeezed = np.squeeze(array_3d)
 
-print(array_squeezed.shape)  # (3,)
+print(array_squeezed)  # (3,)
 ```
 **Output:**
 ```
-(3,)  # Removed unnecessary dimensions
+[1, 2,3]
 ```
 
 - `squeeze()` removes dimensions of size 1, making the array more compact.
