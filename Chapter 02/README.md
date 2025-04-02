@@ -143,8 +143,7 @@ Output
 import numpy as np
 
 arr = np.array([12,23,34,65,67,89,90,87])
-
-arr = arr.resize(2,4) # resize to get 2 rows and 4 columns
+arr.resize(2,4) # resize to get 2 rows and 4 columns
 print(arr)
 
 arr = arr.resize(-1) # to get to the original array
