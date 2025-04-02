@@ -174,6 +174,15 @@ Output
 
 [12,23,34,65,67,89]
 ```
+## **Key Differences**
+| Feature         | `reshape()` | `resize()` |
+|---------------|------------|------------|
+| Returns a new array? | ✅ Yes (does NOT modify original) | ❌ No (modifies original array) |
+| Supports `-1`? | ✅ Yes | ❌ No |
+| Requires exact match of elements? | ✅ Yes | ❌ No (fills with zeros if needed) |
+| Works in-place? | ❌ No | ✅ Yes |
+---
+
 ### Flattening arrays (.flattern(), ravel())
 Both are used to convert multi-dimensional arrays into a one-dimensional array, but they gave some key differences in how they handle the original data.
 - **flatten()** : It returns a copy of the original array in 1D form, meaning it always created a new copy. The original array remaines unchanged.
