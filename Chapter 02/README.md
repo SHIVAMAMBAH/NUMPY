@@ -436,3 +436,129 @@ print(result)
 | `np.concatenate()` | General-purpose concatenation | Can be any axis | `np.concatenate((arr1, arr2), axis=1)` |
 | `np.vstack()` | Vertical stacking (row-wise) | `axis=0` | `np.vstack((arr1, arr2))` |
 | `np.hstack()` | Horizontal stacking (column-wise) | `axis=1` | `np.hstack((arr1, arr2))` |
+
+---
+
+## **Splitting Arrays in NumPy**
+NumPy provides several functions to split an array into multiple sub-arrays. The most commonly used functions for array splitting are:
+
+1. **`np.split()`** – General-purpose splitting along a specified axis.
+2. **`np.vsplit()`** – Splits an array **vertically** (row-wise).
+3. **`np.hsplit()`** – Splits an array **horizontally** (column-wise).
+
+---
+
+## **1. `np.split()` – General Array Splitting**
+The `np.split()` function is used to split an array into multiple sub-arrays along a given axis.
+
+### **Example: Splitting a 1D Array**
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+# Splitting into 3 equal parts
+result = np.split(arr, 3)
+
+print(result)
+```
+**Output:**
+```
+[array([1, 2]), array([3, 4]), array([5, 6])]
+```
+- The array is divided into three equal parts.
+
+> **Note:** The number of elements must be **evenly divisible** by the number of splits, otherwise it will raise an error.
+
+### **Example: Splitting a 2D Array**
+```python
+arr = np.array([[1, 2, 3], 
+                [4, 5, 6], 
+                [7, 8, 9]])
+
+# Splitting into 3 parts along axis 1 (column-wise)
+result = np.split(arr, 3, axis=1)
+
+print(result)
+```
+**Output:**
+```
+[array([[1],
+        [4],
+        [7]]), 
+ array([[2],
+        [5],
+        [8]]), 
+ array([[3],
+        [6],
+        [9]])]
+```
+- The array is split **column-wise** into three sub-arrays.
+
+---
+
+## **2. `np.vsplit()` – Vertical Splitting (Row-wise)**
+- `np.vsplit()` is used to split an array **vertically** (row-wise).
+- Equivalent to `np.split(..., axis=0)`.
+
+### **Example: Splitting a 2D Array Row-wise**
+```python
+arr = np.array([[1, 2, 3], 
+                [4, 5, 6], 
+                [7, 8, 9]])
+
+# Splitting into 3 rows
+result = np.vsplit(arr, 3)
+
+print(result)
+```
+**Output:**
+```
+[array([[1, 2, 3]]), 
+ array([[4, 5, 6]]), 
+ array([[7, 8, 9]])]
+```
+- The array is **split row-wise** into three sub-arrays.
+
+---
+
+## **3. `np.hsplit()` – Horizontal Splitting (Column-wise)**
+- `np.hsplit()` is used to split an array **horizontally** (column-wise).
+- Equivalent to `np.split(..., axis=1)`.
+
+### **Example: Splitting a 2D Array Column-wise**
+```python
+arr = np.array([[1, 2, 3, 4], 
+                [5, 6, 7, 8]])
+
+# Splitting into 2 equal parts column-wise
+result = np.hsplit(arr, 2)
+
+print(result)
+```
+**Output:**
+```
+[array([[1, 2], 
+        [5, 6]]), 
+ array([[3, 4], 
+        [7, 8]])]
+```
+- The array is **split column-wise** into two parts.
+
+---
+
+## **Summary Table**
+| Function | Splitting Type | Default Axis | Example |
+|----------|---------------|--------------|---------|
+| `np.split()` | General-purpose splitting | Can be any axis | `np.split(arr, 2, axis=1)` |
+| `np.vsplit()` | Vertical splitting (row-wise) | `axis=0` | `np.vsplit(arr, 3)` |
+| `np.hsplit()` | Horizontal splitting (column-wise) | `axis=1` | `np.hsplit(arr, 2)` |
+
+---
+
+## **Conclusion**
+- Use **`np.split()`** when you need **full control** over axis selection.
+- Use **`np.vsplit()`** for **row-wise** splitting.
+- Use **`np.hsplit()`** for **column-wise** splitting.
+
+Would you like an example of **uneven splitting** using `np.array_split()`? 🚀
