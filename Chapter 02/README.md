@@ -555,10 +555,3 @@ print(result)
 | `np.hsplit()` | Horizontal splitting (column-wise) | `axis=1` | `np.hsplit(arr, 2)` |
 
 ---
-
-## **Conclusion**
-- Use **`np.split()`** when you need **full control** over axis selection.
-- Use **`np.vsplit()`** for **row-wise** splitting.
-- Use **`np.hsplit()`** for **column-wise** splitting.
-
-Would you like an example of **uneven splitting** using `np.array_split()`? 🚀
