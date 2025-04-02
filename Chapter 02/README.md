@@ -225,3 +225,5 @@ output
 | **Usage**           | Use when you need a completely new, independent array | Use when you need a flattened view of the original array |
 ---
 
+### Exapanding and sqeezing dimensions
+
