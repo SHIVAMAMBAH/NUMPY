@@ -225,5 +225,36 @@ output
 | **Usage**           | Use when you need a completely new, independent array | Use when you need a flattened view of the original array |
 ---
 
-### Exapanding and sqeezing dimensions
+## **3. Expanding Dimensions (`np.newaxis`, `expand_dims()`)**
+Sometimes, we need to increase the dimensions of an array.
 
+### **Example: Converting a 1D array to 2D (Row Vector)**
+```python
+array_row_vector = array_1d[np.newaxis, :]
+print(array_row_vector.shape)  # (1, 6)
+```
+**Output:**
+```
+(1, 6)  # 2D array with 1 row and 6 columns
+```
+**Output:**
+```
+(1, 6)  # 2D array with 1 row and 6 columns
+```
+
+### **Example: Converting a 1D array to 2D (Column Vector)**
+```python
+array_column_vector = array_1d[:, np.newaxis]
+print(array_column_vector.shape)  # (6, 1)
+```
+**Output:**
+```
+(6, 1)  # 2D array with 6 rows and 1 column
+```
+- `np.newaxis` adds an extra dimension to convert a 1D array into a 2D row or column vector.
+
+Alternatively, you can use `expand_dims()`:
+```python
+array_expanded = np.expand_dims(array_1d, axis=0)  # Adds dimension at axis 0
+print(array_expanded.shape)  # (1, 6)
+```
