@@ -198,8 +198,21 @@ flattened_array = array_2d.flatten()
 print(flattened_array)
 
 ```
-###Output
+Output
 ```python
 [1 2 3 4 5 6]
 ```
-- **ravel()** : It returns a flattened view of the original array whenever possible, meaning it tries to avoid creating a copy and returns a view. However, if the memory layout doesn't allow, it might create a copy. 
+- **ravel()** : It returns a flattened view of the original array whenever possible, meaning it tries to avoid creating a copy and returns a view. However, if the memory layout doesn't allow, it might create a copy.
+
+```python
+# Ravel the array
+raveled_array = array_2d.ravel()
+
+print(raveled_array)
+
+```
+output
+```python
+[1 2 3 4 5 6]
+```
+
