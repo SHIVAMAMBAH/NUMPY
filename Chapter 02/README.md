@@ -1,6 +1,6 @@
 ## Indexing and Slicing
 ### Accessing elements using indexing
-```
+```python
 # for 1D array
 import numpy as np
 arr = np.array([12,34,56,78])
@@ -16,7 +16,7 @@ Output
 78
 56
 ```
-```
+```python
 # for 2D array
 import numpy as np
 arr = np.array([[12,34,56,78],[23,54,67,89]])
@@ -28,7 +28,7 @@ Output
 12
 23
 ```
-```
+```python
 # for 3D array
 import numpy as np
 arr = np.array([[[12,56,78],[23,54,89]],[[22,64,56],[54,67,89]]])
@@ -43,7 +43,7 @@ Output
 23
 ```
 ### Multi-dimensional array slicing
-```
+```python
 import numpy as np
 array_2D = np.array([[1,2,3,5],
                      [5,6,7,8],
@@ -72,7 +72,7 @@ Output
  [5  6  7  8]
  [1  2  3  4]]
 ```
-```
+```python
 import numpy as np
 array_3D = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[13,14,15],[16,17,18]]])
 
@@ -92,7 +92,7 @@ print(slice_3d)
 ```
 ### fancy indexing
 Fancy indexing refers to using arrays of integers or boolean values to index into another array. It is more flexible and powerful than regular slicing, allowing for non-sequential and complex element access.
-```
+```python
 import numpy as np
 array = np.array([10,20,30,40,50,60])
 indices = np.array([0,2,4])
@@ -105,7 +105,7 @@ Output
 ### Boolean masking
 Boolean masking is a powerful technique that allows you to filter or manipulate elements of an array based on conditions. A boolean mask is essentially an NumPy Array of the same shape as the original array, where each element is either <mark>True</mark> or <mark>False</mark>. When you apply this mask to an array, it returns the elmenets where the mask it <mark>True</mark>, filtering out the elements where the mask is <mark>False</mark>.
 
-```
+```python
 import numpy as np
 arr = np.array([12,23,35,56,67,90])
 mask = arr>25
@@ -120,7 +120,7 @@ The condition <mark>arr>25</mark> creates a boolean mask
 [False, False, True, True, True ,True,True]
 ```
 Set elements greater than 25 to 100
-```
+```python
 arr[mask] = 100
 print(arr)
 ```
@@ -129,7 +129,7 @@ output
 [12,23,100,100,100,100]
 ```
 Combining multiple conditions with boolean masking by using the logical operator (&, |,~)
-```
+```python
 mask = (arr>25) & (arr<45)
 print(arr[mask])
 ```
@@ -139,7 +139,7 @@ Output
 ```
 ## Reshaping and Resizing Arrays
 ### Reshaping arrays using np.reshape()
-```
+```python
 import numpy as np
 
 arr = np.array([12,23,34,65,67,89,90,87])
