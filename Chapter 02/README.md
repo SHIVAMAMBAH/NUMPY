@@ -281,3 +281,14 @@ print(array_squeezed)  # (3,)
 - `squeeze()` removes dimensions of size 1, making the array more compact.
 
 ---
+
+## **Summary**
+| Function | Purpose | Modifies Data? | Example |
+|----------|---------|---------------|---------|
+| `reshape()` | Change shape while keeping the same number of elements | No (returns a new array) | `array.reshape(2,3)` |
+| `flatten()` | Convert multi-dimensional array to 1D | Yes (returns a copy) | `array.flatten()` |
+| `ravel()` | Convert multi-dimensional array to 1D | No (returns a view) | `array.ravel()` |
+| `np.newaxis` | Add a new axis (increase dimensions) | No | `array[:, np.newaxis]` |
+| `expand_dims()` | Add an extra dimension | No | `np.expand_dims(array, axis=0)` |
+| `squeeze()` | Remove single-dimensional entries | No | `np.squeeze(array)` |
+| `resize()` | Change size and modify original array | Yes (modifies in-place) | `array.resize((3,2))` |
