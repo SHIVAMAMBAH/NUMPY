@@ -10,7 +10,7 @@ print(arr[-1]) # give the last element
 print(arr[-2]) # give the second last element
 ```
 Output
-```
+```python
 12
 34
 78
@@ -24,7 +24,7 @@ print(arr[0][0]) # give the first element of first row
 print(arr[1][0]) # give the second element first element of second row
 ```
 Output
-```
+```python
 12
 23
 ```
@@ -37,7 +37,7 @@ print(arr[1][0][0])
 print(arr[0][1][0])
 ```
 Output
-```
+```python
 12
 22
 23
@@ -62,7 +62,7 @@ reverse_rows = array_2D[::-1,:]
 print(reverse_rows)
 ```
 Output
-```
+```python
 [5 6 7 8]
 [3 7 11 15]
 [[1 2]
@@ -82,7 +82,7 @@ print(submatrix_3d)
 slice_3d = array_3d[:,0,0] # to slice the first element from all 2D matrices
 print(slice_3d)
 ```
-```
+```python
 [[[ 1  2  3]
   [ 4  5  6]]
 
@@ -99,7 +99,7 @@ indices = np.array([0,2,4])
 print(array[indices])
 ```
 Output
-```
+```python
 [10,30,50]
 ```
 ### Boolean masking
@@ -112,7 +112,7 @@ mask = arr>25
 print(arr[mask])
 ```
 Output
-```
+```python
 [35,56,67,90]
 ```
 The condition <mark>arr>25</mark> creates a boolean mask
@@ -125,7 +125,7 @@ arr[mask] = 100
 print(arr)
 ```
 output
-```
+```python
 [12,23,100,100,100,100]
 ```
 Combining multiple conditions with boolean masking by using the logical operator (&, |,~)
@@ -134,7 +134,7 @@ mask = (arr>25) & (arr<45)
 print(arr[mask])
 ```
 Output
-```
+```python
 [35]
 ```
 ## Reshaping and Resizing Arrays
@@ -161,7 +161,7 @@ print(arr)
 
 ```
 Output
-```
+```python
 [[12,23,34,65]
  [67,89,90,87]]
 
