@@ -232,21 +232,27 @@ Sometimes, we need to increase the dimensions of an array.
 ```python
 array_1D = arr = np.array([12,23,34,45,56,67,78])
 array_row_vector = array_1d[np.newaxis, :]
-print(array_row_vector.shape)  # (1, 6)
+print(array_row_vector.)  # (1, 8)
 ```
 **Output:**
 ```
-[[12,23,34,45,56,67,78]] # 2D array with 1 row and 6 columns
+[[12,23,34,45,56,67,78]] # 2D array with 1 row and 8 columns
 ```
 
 ### **Example: Converting a 1D array to 2D (Column Vector)**
 ```python
 array_column_vector = array_1d[:, np.newaxis]
-print(array_column_vector)  # (6, 1)
+print(array_column_vector)  # (8, 1)
 ```
 **Output:**
 ```
-[[]]  # 2D array with 6 rows and 1 column
+[[12]
+ [23]
+ [34]
+ [45]
+ [56]
+ [67]
+ [78]]
 ```
 - `np.newaxis` adds an extra dimension to convert a 1D array into a 2D row or column vector.
 
