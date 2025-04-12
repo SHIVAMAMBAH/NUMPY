@@ -269,3 +269,82 @@ Here:
 | Flexibility     | Works with arrays of different shapes      |
 
 ---
+
+
+##  **Linear Algebra in NumPy**
+
+NumPy offers a robust set of tools for **linear algebra**, which is the foundation of scientific computing, data science, computer graphics, and machine learning.
+
+These operations are part of the `numpy.linalg` module (Linear Algebra module).
+
+---
+
+##  **1. Vectors and Matrices**
+
+- **Vector** → 1D array  
+  Example: `v = np.array([1, 2, 3])`
+- **Matrix** → 2D array  
+  Example: `M = np.array([[1, 2], [3, 4]])`
+
+You can also create matrices using:
+```python
+np.matrix([[1, 2], [3, 4]])
+```
+
+---
+
+##  **2. Matrix Operations**
+
+| Operation                    | Function                          |
+|------------------------------|-----------------------------------|
+| Matrix multiplication        | `np.dot(A, B)` or `A @ B`         |
+| Transpose                    | `A.T`                             |
+| Determinant                  | `np.linalg.det(A)`                |
+| Inverse                      | `np.linalg.inv(A)`                |
+| Eigenvalues and Eigenvectors| `np.linalg.eig(A)`                |
+| Solving Ax = B               | `np.linalg.solve(A, B)`           |
+| Rank of matrix               | `np.linalg.matrix_rank(A)`        |
+| Trace (sum of diagonals)     | `np.trace(A)`                     |
+
+---
+
+##  **3. Example Use Cases**
+
+###  Matrix Multiplication:
+```python
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[2, 0], [1, 2]])
+
+np.dot(A, B) or A @ B
+```
+
+###  Solving a Linear System:
+Solving `Ax = b`:
+```python
+A = np.array([[3, 1], [1, 2]])
+b = np.array([9, 8])
+
+x = np.linalg.solve(A, b)
+```
+
+---
+
+##  Performance Benefits
+
+- NumPy uses **optimized C/Fortran BLAS libraries** under the hood.
+- Can handle **very large matrices** efficiently.
+- Supports operations that are core to **machine learning** and **engineering problems**.
+
+---
+
+##  Applications in Real Life
+
+| Field              | Usage                                      |
+|--------------------|--------------------------------------------|
+| Machine Learning   | Solving systems of equations, PCA, etc.     |
+| Physics/Engineering| Simulating mechanics, electrical networks  |
+| Graphics/Games     | 3D transformations and projections         |
+| Data Science       | Dimensionality reduction, optimization     |
+
+---
+
