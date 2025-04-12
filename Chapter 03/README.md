@@ -177,3 +177,95 @@ These perform element-wise arithmetic:
 
 ---
 
+###  What is Broadcasting?
+
+**Broadcasting** is a set of rules used by NumPy to **perform operations on arrays of different shapes and sizes**. Instead of manually resizing arrays, NumPy automatically stretches the smaller array across the larger one so that element-wise operations can proceed.
+
+This allows for **efficient vectorized computation** without writing explicit loops or reshaping arrays.
+
+---
+
+##  Broadcasting Rules
+
+To determine whether broadcasting is possible, NumPy compares the shapes of the arrays **from right to left**.
+
+### **Rule 1:** If the dimensions are equal, they’re compatible.  
+### **Rule 2:** If one of the dimensions is `1`, it can be broadcast to match the other.  
+### **Rule 3:** If neither dimension is equal or `1`, it's incompatible → **Error**.
+
+---
+
+##  Examples to Understand Broadcasting
+
+###  **1. Scalar + Array**
+```python
+a = np.array([1, 2, 3])
+b = 5
+print(a + b)  # Output: [6 7 8]
+```
+The scalar `5` is broadcasted to `[5, 5, 5]`.
+
+---
+
+###  **2. 1D Array + 2D Array**
+```python
+a = np.array([[1], [2], [3]])  # Shape: (3, 1)
+b = np.array([10, 20, 30])     # Shape: (3,)
+
+# To broadcast, b becomes: [[10, 20, 30]]
+# Resulting in shape (3, 3)
+```
+
+---
+
+###  **3. Matrix + Row Vector**
+```python
+A = np.array([[1, 2, 3],
+              [4, 5, 6]])    # Shape: (2, 3)
+
+b = np.array([10, 20, 30])    # Shape: (3,)
+
+# Result: each row of A has b added to it
+```
+
+---
+
+###  **4. Incompatible Shapes**
+```python
+a = np.array([[1, 2], [3, 4]])  # Shape: (2, 2)
+b = np.array([1, 2, 3])         # Shape: (3,)
+
+#  Cannot broadcast: 2 ≠ 3 and neither is 1 → Error
+```
+
+---
+
+##  Broadcasting in Action
+
+```python
+a = np.arange(3)              # [0 1 2]
+b = np.arange(3).reshape(3, 1) # [[0], [1], [2]]
+
+result = a + b
+# Output:
+# [[0 1 2]
+#  [1 2 3]
+#  [2 3 4]]
+```
+
+Here:
+- `a` shape = `(3,)`
+- `b` shape = `(3, 1)`
+- Resulting shape = `(3, 3)` via broadcasting
+
+---
+
+##  Why Broadcasting is Important
+
+| Feature         | Advantage                                  |
+|----------------|---------------------------------------------|
+| Efficiency      | Faster than loops (done in C backend)      |
+| Simplicity      | Cleaner syntax for mathematical operations |
+| Flexibility     | Works with arrays of different shapes      |
+
+---
