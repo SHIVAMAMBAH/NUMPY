@@ -70,3 +70,100 @@ print(data['second'])  # Output: array([4, 5, 6])
 | Load array  | `np.load()`          | `.npy`, `.npz` |
 
 ---
+
+Awesome! Let's now explore how NumPy handles **text and CSV files**. This is incredibly useful when you're dealing with real-world datasets, logs, or exported spreadsheets.
+
+---
+
+##  **Working with Text and CSV Files in NumPy**
+
+NumPy offers simple yet powerful tools to read from and write to **text and CSV files** directly.
+
+---
+
+##  **1. Reading and Writing Arrays to/from Text Files**
+
+###  `np.savetxt()`
+
+Saves an array to a **plain text** file (including CSV format).
+
+**Syntax:**
+```python
+np.savetxt('filename.txt', array, delimiter=',', fmt='%d')
+```
+
+**Example:**
+```python
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+np.savetxt('data.csv', arr, delimiter=',', fmt='%d')
+```
+
+---
+
+###  `np.loadtxt()`
+
+Loads data from a text file or CSV into an array.
+
+**Syntax:**
+```python
+np.loadtxt('filename.txt', delimiter=',', dtype=int)
+```
+
+**Example:**
+```python
+data = np.loadtxt('data.csv', delimiter=',', dtype=int)
+```
+
+---
+
+##  **2. Handling CSV Files**
+
+For more flexibility (e.g., missing data, headers), NumPy provides:
+
+---
+
+###  `np.genfromtxt()`
+
+- Reads CSV/text files.
+- Handles **missing values**, **comments**, and **headers**.
+
+**Syntax:**
+```python
+np.genfromtxt('file.csv', delimiter=',', skip_header=1, filling_values=0)
+```
+
+**Example:**
+```python
+data = np.genfromtxt('data_with_header.csv', delimiter=',', skip_header=1)
+```
+
+---
+
+###  `np.recfromcsv()`
+
+- Loads CSV data as a **record array** (like a table with named columns).
+- Automatically **infers data types** from the header.
+
+**Syntax:**
+```python
+np.recfromcsv('file.csv')
+```
+
+**Example:**
+```python
+records = np.recfromcsv('students.csv')
+print(records.name)  # Access column by name
+```
+
+---
+
+##  Summary Table
+
+| Function             | Purpose                         | Key Feature                          |
+|----------------------|----------------------------------|--------------------------------------|
+| `np.savetxt()`       | Save array to plain text/CSV     | Simple and fast                      |
+| `np.loadtxt()`       | Load text/CSV into array         | Clean files with no headers          |
+| `np.genfromtxt()`    | Load with flexibility            | Skips headers, handles missing data  |
+| `np.recfromcsv()`    | Record arrays from CSV           | Columns accessible by name           |
+
+---
