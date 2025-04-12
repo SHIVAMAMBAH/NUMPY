@@ -107,7 +107,7 @@ Ufuncs are much faster than looping through array elements in pure Python and ar
 
 ---
 
-## ⚙️ **Categories of ufuncs**
+##  **Categories of ufuncs**
 
 Ufuncs are classified into different types based on the kind of operation they perform.
 
